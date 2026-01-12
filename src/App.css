@@ -1,0 +1,430 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+.app {
+  min-height: 100vh;
+  transition: all 0.3s ease;
+}
+
+.app.light {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #333;
+}
+
+.app.dark {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  color: #f0f0f0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header h1 {
+  font-size: 1.8rem;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header button {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+header button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dark .card {
+  background: rgba(30, 41, 59, 0.95);
+  color: #f0f0f0;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+  color: #667eea;
+  border-bottom: 2px solid #667eea;
+  padding-bottom: 0.5rem;
+}
+
+.dark .card h2 {
+  color: #a78bfa;
+  border-color: #a78bfa;
+}
+
+.card .description {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.75rem;
+  line-height: 1.5;
+}
+
+.dark .card .description {
+  color: #94a3b8;
+}
+
+.card .description code {
+  background: rgba(102, 126, 234, 0.15);
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-family: 'Fira Code', 'Consolas', monospace;
+  font-size: 0.85rem;
+  color: #667eea;
+}
+
+.dark .card .description code {
+  background: rgba(167, 139, 250, 0.2);
+  color: #a78bfa;
+}
+
+.doc-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  color: #667eea;
+  text-decoration: none;
+  padding: 0.4rem 0.8rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.dark .doc-link {
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.15);
+}
+
+.doc-link:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateX(5px);
+}
+
+.dark .doc-link:hover {
+  background: rgba(167, 139, 250, 0.25);
+}
+
+.doc-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.demo-section {
+  background: rgba(0, 0, 0, 0.03);
+  border-radius: 8px;
+  padding: 1rem;
+  margin-top: 0.5rem;
+}
+
+.dark .demo-section {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.learn-more-link {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: #667eea;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 6px;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.dark .learn-more-link {
+  color: #a78bfa;
+  background: rgba(167, 139, 250, 0.15);
+}
+
+.learn-more-link:hover {
+  background: rgba(102, 126, 234, 0.2);
+  transform: translateX(5px);
+}
+
+.dark .learn-more-link:hover {
+  background: rgba(167, 139, 250, 0.25);
+}
+
+.learn-more-links {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.card p {
+  margin-bottom: 0.5rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.button-group button,
+.card button {
+  padding: 0.6rem 1rem;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button-group button:hover,
+.card button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.timer-display {
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+  color: #667eea;
+  margin: 1rem 0;
+}
+
+.dark .timer-display {
+  color: #a78bfa;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.form-group input {
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.dark .form-group input {
+  background: #334155;
+  border-color: #475569;
+  color: #f0f0f0;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.dark .form-group input::placeholder {
+  color: #94a3b8;
+}
+
+.todo-input {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.todo-input input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.dark .todo-input input {
+  background: #334155;
+  border-color: #475569;
+  color: #f0f0f0;
+}
+
+.todo-input input:focus {
+  outline: none;
+  border-color: #667eea;
+}
+
+.todo-list {
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.todo-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem;
+  margin-bottom: 0.5rem;
+  background: rgba(102, 126, 234, 0.1);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.dark .todo-list li {
+  background: rgba(167, 139, 250, 0.1);
+}
+
+.todo-list li:hover {
+  background: rgba(102, 126, 234, 0.2);
+}
+
+.todo-list li span {
+  cursor: pointer;
+  flex: 1;
+}
+
+.todo-list li.completed span {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.todo-list li button {
+  padding: 0.4rem 0.6rem;
+  background: #ef4444;
+  font-size: 0.8rem;
+}
+
+.todo-list li button:hover {
+  background: #dc2626;
+}
+
+.pending-indicator {
+  color: #f59e0b;
+  font-weight: 600;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.search-results {
+  list-style: none;
+  max-height: 150px;
+  overflow-y: auto;
+  margin-top: 0.5rem;
+}
+
+.search-results li {
+  padding: 0.4rem 0.75rem;
+  background: rgba(102, 126, 234, 0.1);
+  margin-bottom: 0.25rem;
+  border-radius: 4px;
+}
+
+.dark .search-results li {
+  background: rgba(167, 139, 250, 0.1);
+}
+
+.measure-box {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 1rem;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  transition: width 0.3s ease;
+  min-width: 100px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+  opacity: 0.8;
+}
+
+/* Scrollbar styling */
+.todo-list::-webkit-scrollbar {
+  width: 6px;
+}
+
+.todo-list::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+
+.todo-list::-webkit-scrollbar-thumb {
+  background: #667eea;
+  border-radius: 3px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  main {
+    padding: 1rem;
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: 1rem;
+  }
+}
