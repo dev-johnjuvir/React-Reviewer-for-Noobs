@@ -1,7 +1,7 @@
 .hook-page {
-  max-width: 900px;
+  max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 4rem;
   min-height: 100vh;
   background: linear-gradient(135deg, #f5f7fa 0%, #e4e8ec 100%);
 }
@@ -41,6 +41,7 @@
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  width: 100%;
 }
 
 .intro h2 {
@@ -150,6 +151,7 @@
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   margin-bottom: 1.5rem;
   border-left: 4px solid #667eea;
+  width: 100%;
 }
 
 .example-card h3 {
@@ -301,6 +303,7 @@
   padding: 1.5rem 2rem;
   border-radius: 12px;
   border-left: 4px solid #f59e0b;
+  width: 100%;
 }
 
 .tips h2 {
