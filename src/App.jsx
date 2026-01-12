@@ -272,6 +272,45 @@ function App() {
             <p>Click counter buttons above to resize the box</p>
           </div>
         </section>
+
+        {/* useContext Section */}
+        <section className="card">
+          <h2>🌐 Context (useContext)</h2>
+          <p className="description">
+            <code>useContext</code> — Share data across components without prop drilling.
+          </p>
+          <Link to="/usecontext" className="learn-more-link">📖 Learn more about useContext →</Link>
+          <div className="demo-section">
+            <p>Perfect for: themes, user auth, language settings</p>
+            <p>Current theme: <strong>{darkMode ? 'Dark' : 'Light'}</strong> ← Uses context!</p>
+          </div>
+        </section>
+
+        {/* useReducer Section */}
+        <section className="card">
+          <h2>🔀 Reducer (useReducer)</h2>
+          <p className="description">
+            <code>useReducer</code> — Manage complex state with actions, like Redux.
+          </p>
+          <Link to="/usereducer" className="learn-more-link">📖 Learn more about useReducer →</Link>
+          <div className="demo-section">
+            <p>Great for: forms, shopping carts, complex state logic</p>
+            <p>Alternative to useState for advanced patterns.</p>
+          </div>
+        </section>
+
+        {/* useId Section */}
+        <section className="card">
+          <h2>🆔 Unique IDs (useId)</h2>
+          <p className="description">
+            <code>useId</code> — Generate unique IDs for accessibility attributes.
+          </p>
+          <Link to="/useid" className="learn-more-link">📖 Learn more about useId →</Link>
+          <div className="demo-section">
+            <p>Use for: form labels, aria attributes, SSR-safe IDs</p>
+            <p>Replaces Math.random() for stable, unique IDs.</p>
+          </div>
+        </section>
       </main>
 
       <footer>
